@@ -94,35 +94,12 @@ Get-FileHash -Algorithm MD5 C:\Users\MBE66\Documents\desktop.ini
 (Get-Date -Date "$((Get-Date).Year + 1)/1/1") - (Get-Date)
 
 
-#REST AND JSON
+#LOOPS
 ================================================================================
-#REST API EXAMPLE
-$Cred = Get-Credential
-$Url = "https://server.contoso.com:8089/services/search/jobs/export"
-$Body = @{
-    search = "search index=_internal | reverse | table index,host,source,sourcetype,_raw"
-    output_mode = "csv"
-    earliest_time = "-2d@d"
-    latest_time = "-1d@d"
-}
-Invoke-RestMethod -Method Post -Uri $url -Credential $Cred -Body $body -OutFile out.csv
+for($i=10 ; $i -gt 0; $i--)  { if($i -eq 5) {write-host $i -foregroundcolor red} else {write-host $i -foregroundcolor cyan}} 
+$mymatrix = (1,2,3,4,5) ; $i = 0 ; do {write-host $mymatrix[$i] ; $i++}  while ($mymatrix[$i] -lt 4) 
+$num = Read-Host "Enter a number" ; Switch ($num) { 1 {'Run Action 1'} ; 2 {'Run Action 2'} ; 3 {'Run Action 3'} }
 
-#JSON EXAMPLE. Get info about Registry process, convert to json, save it to file, print it and reconvert it 
-Get-Process Registry | ConvertTo-Json | Tee-Object json.txt ; Get-Content .\json.txt | ConvertFrom-Json
-
-
-#OBJECTS
-================================================================================
-
-
-
-#PIPELINE
-================================================================================
-#   $_ and $PSItem are the same variable. It's the current item in the pipeline
-1,2,3 | %{ write-host $_ } 
-1,2,3 | %{ write-host $PSItem } 
-1,2,3 | Where-Object {$_ -gt 1}
-1,2,3 | Where-Object {$PSItem -gt 1}
 
 
 #VARS
@@ -159,6 +136,8 @@ $data2 = @(
 )
 Write-Host $mybigarray = New-Object 'object[,,]' 10,20,10
 
+
+
 #HASHTABLE
 ================================================================================
 $myhashtable = @{London = "Critical" ; Manchester = "Critical" ; Brighton = "Non-critical"} 
@@ -169,12 +148,6 @@ $myhashtable.Count
 $myhashtable.ContainsKey('London')
 
 
-#LOOPS
-================================================================================
-for($i=10 ; $i -gt 0; $i--)  { if($i -eq 5) {write-host $i -foregroundcolor red} else {write-host $i -foregroundcolor cyan}} 
-$mymatrix = (1,2,3,4,5) ; $i = 0 ; do {write-host $mymatrix[$i] ; $i++}  while ($mymatrix[$i] -lt 4) 
-$num = Read-Host "Enter a number" ; Switch ($num) { 1 {'Run Action 1'} ; 2 {'Run Action 2'} ; 3 {'Run Action 3'} }
-
 
 #FUNCTIONS
 ================================================================================
@@ -182,6 +155,7 @@ function global:Get-DependentSvs { $myreturn = Get-Service | Where-Object {$_.De
 function global:Getme-something ([string]$myparameter1, [bool]$myparameter2)  { Write-Host $myparameter1 ; Write-Host $myparameter2} 
 #Check the code of a given function
 Get-Content function:\Getme-something
+
 
 
 #EXCEPTIONS
@@ -227,6 +201,64 @@ catch [System.IO.IOException]
 }
 
 
+#PIPELINE
+================================================================================
+#   $_ and $PSItem are the same variable. It's the current item in the pipeline
+1,2,3 | %{ write-host $_ } 
+1,2,3 | %{ write-host $PSItem } 
+1,2,3 | Where-Object {$_ -gt 1}
+1,2,3 | Where-Object {$PSItem -gt 1}
+
+
+
+#HELP
+================================================================================
+Get-help -Name Test-Connection -Full
+Get-Command
+
+
+
+#MODULES
+================================================================================
+
+
+
+
+#OBJECTS
+================================================================================
+
+
+
+
+
+
+#REST AND JSON
+================================================================================
+#REST API EXAMPLE
+$Cred = Get-Credential
+$Url = "https://server.contoso.com:8089/services/search/jobs/export"
+$Body = @{
+    search = "search index=_internal | reverse | table index,host,source,sourcetype,_raw"
+    output_mode = "csv"
+    earliest_time = "-2d@d"
+    latest_time = "-1d@d"
+}
+Invoke-RestMethod -Method Post -Uri $url -Credential $Cred -Body $body -OutFile out.csv
+
+#JSON EXAMPLE. Get info about Registry process, convert to json, save it to file, print it and reconvert it 
+Get-Process Registry | ConvertTo-Json | Tee-Object json.txt ; Get-Content .\json.txt | ConvertFrom-Json
+
+
+
+#WEB
+================================================================================
+#Get a website
+$Response = Invoke-WebRequest -URI https://www.bing.com/
+#Get links
+(Invoke-WebRequest -Uri "https://aka.ms/pscore6-docs").Links.Href
+
+
+
 
 #TEXT N REGEX
 ================================================================================
@@ -245,16 +277,6 @@ Get-Content ./logfile.log -Tail 5 –Wait
 [string]$myecho = @" 
 Move-Item .\json2.txt .\this_is_how_you_deal_with_apostrophes.txt" -Confirm
 "@
-
-
-#HELP
-================================================================================
-Get-help -Name Test-Connection -Full
-Get-Command
-
-
-#MODULES
-================================================================================
 
 
 
