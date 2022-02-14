@@ -134,6 +134,8 @@ $data2 = @(
     @(4,5,6),
     @(7,8,9)
 )
+
+#Multidimensional array created as an object
 Write-Host $mybigarray = New-Object 'object[,,]' 10,20,10
 
 
@@ -146,7 +148,7 @@ $myhashtable.keys
 $myhashtable.values
 $myhashtable.Count
 $myhashtable.ContainsKey('London')
-
+$myhashtable.london
 
 
 #FUNCTIONS
