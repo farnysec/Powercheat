@@ -2,38 +2,22 @@
 ###POWERSHELL CHEATSHEET EXT EDITION####
 ########################################
 
+#LINKS
+================================================================================
+https://docs.microsoft.com/en-gb/powershell/
+https://www.powershellgallery.com/
+https://forums.powershell.org/
+https://www.reddit.com/r/PowerShell/
+
+
 #SYSTEM
 ================================================================================
 #Access the windows registry
 Get-Item -Path Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion | Select-Object -ExpandProperty Property
 #Set the policy to execute scripts
 Set-ExecutionPolicy AllSigned
+#Check disk
 Get-disk -Verbose
-#For further information, check the CIM section
-
-
-#CIM
-================================================================================
-#Display a list of CIM objects
-Get-CimClass -ClassName Win32_Dis*
-Get-CimClass -ClassName *
-Get-CimInstance Win32_DiskDrive -Property *
-# BIOS Version
-(Get-CimInstance Win32_BIOS).SMBIOSBIOSVersion
-# Serial Number
-(Get-CimInstance Win32_BIOS).SerialNumber
-# Model
-(Get-CimInstance Win32_ComputerSystem).Model
-# Printers
-Get-CimInstance Win32_Printer | Select-Object Name, PortName, Default
-# Active Directory Domain
-(Get-CimInstance Win32_ComputerSystem).Domain
-#Time since last reboot
-(Get-CimInstance Win32_OperatingSystem).LastBootUpTime
-#Get all data about system
-Get-CIMInstance Win32_OperatingSystem | select *
-#Get free memory
-Get-CIMInstance Win32_OperatingSystem | Select FreePhysicalMemory
 
 
 #LOGS
@@ -82,6 +66,30 @@ Set-Location 'C:\Users\MBE66\OneDrive - Sky\Documents\Projects\powershell'
 Get-Content ./logfile.log -Tail 5 –Wait
 Get-ChildItem -Force -Recurse -File | Where Length -gt 100MB | Sort Length -Descending | Select fullname, CreationTime
 Get-FileHash -Algorithm MD5 C:\Users\MBE66\Documents\desktop.ini
+
+
+#CIM
+================================================================================
+#Display a list of CIM objects
+Get-CimClass -ClassName Win32_Dis*
+Get-CimClass -ClassName *
+Get-CimInstance Win32_DiskDrive -Property *
+# BIOS Version
+(Get-CimInstance Win32_BIOS).SMBIOSBIOSVersion
+# Serial Number
+(Get-CimInstance Win32_BIOS).SerialNumber
+# Model
+(Get-CimInstance Win32_ComputerSystem).Model
+# Printers
+Get-CimInstance Win32_Printer | Select-Object Name, PortName, Default
+# Active Directory Domain
+(Get-CimInstance Win32_ComputerSystem).Domain
+#Time since last reboot
+(Get-CimInstance Win32_OperatingSystem).LastBootUpTime
+#Get all data about system
+Get-CIMInstance Win32_OperatingSystem | select *
+#Get free memory
+Get-CIMInstance Win32_OperatingSystem | Select FreePhysicalMemory
 
 
 #DATE_N_TIME
@@ -150,7 +158,7 @@ $myhashtable.ContainsKey('London')
 $myhashtable.london
 
 
-#FUNCTIONS
+#FUNCTIONS oneliner
 ================================================================================
 #Create new functions
 function global:Get-DependentSvs { $myreturn = Get-Service | Where-Object {$_.DependentServices} ; $myreturn = 2 ;return $myreturn}
@@ -175,6 +183,8 @@ catch
 		Write-Output "Something threw an exception"
 		Write-Output $_
 	}
+
+
 
 #2nd example
 try
