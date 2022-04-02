@@ -12,11 +12,12 @@ The second goal is CyberSecurity support to perform different tasks such as Syst
 The third goal is showing the basic algorithms and how to use them with PowerShell
 
 Contect summary:
--Basic_PS_Cheatsheet
-
-
-
-
+-Basic_PS_Cheatsheet --> Basic cmdlets, functions, variables and loops.
+-Basic_sec_PS_Cheatsheet -->
+-Pentest_sec_PS_Cheatsheet -->
+-SysAdmin_PS_Cheatsheet -->
+-SOC_PS_Cheatsheet -->
+-Algo_PS_Cheatsheet -->
               _
              | |
              | |===( )   //////
