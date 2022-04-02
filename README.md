@@ -1,8 +1,6 @@
-===================
-
-====PPOWERCHEAT====
-
-===================
+==================
+====POWERCHEAT====
+==================
 
 This is an educational repository of powershell scripts.
 
