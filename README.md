@@ -1,10 +1,10 @@
-# ====POWERCHEAT====
+# ======POWERCHEAT======
 
-## Educational repository of powershell scripts.
+## Educational repository of powershell scripts
 
-❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙
-
-
+❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚  
+🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚❤️  
+💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚❤️🧡
 
 **-Basic_PS_Cheatsheet --> Basic cmdlets, functions, variables and loops.**
 
@@ -16,14 +16,14 @@
 
 **-SOC_PS_Cheatsheet -->**
 
-**-Algo_PS_Cheatsheet -->**
-
-
-
-
-
-
-
+**-Algo_PS_Cheatsheet -->**  
+  
+  
+  
+  
+  
+  
+  
 
 
 
