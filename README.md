@@ -14,7 +14,7 @@
 
 **-Basic_PS_Cheatsheet --> Basic cmdlets, functions, variables and loops.**
 
-**-Basic_sec_PS_Cheatsheet -->**
+**-Basic_sec_PS_Cheatsheet --> Basic security tasks related to windows registry, hashes, logs, etc** 
 
 **-Pentest_sec_PS_Cheatsheet -->**
 
