@@ -1,8 +1,12 @@
 ====POWERCHEAT====
 =========
+❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙
 
 Educational repository of powershell scripts.
 ---------------
+
+
+
 The content is aimed to support learners to use the PowerShell.
 
 The first goal is basic understanding of the powershell, cmdlets, loops, variables, system cmdlets, functions, etc
@@ -13,11 +17,18 @@ The third goal is showing the basic algorithms and how to use them with PowerShe
 
 Contect summary:
 -Basic_PS_Cheatsheet --> Basic cmdlets, functions, variables and loops.
+
 -Basic_sec_PS_Cheatsheet -->
+
 -Pentest_sec_PS_Cheatsheet -->
+
 -SysAdmin_PS_Cheatsheet -->
+
 -SOC_PS_Cheatsheet -->
+
 -Algo_PS_Cheatsheet -->
+
+
               _
              | |
              | |===( )   //////
