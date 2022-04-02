@@ -10,6 +10,9 @@ The third goal is showing the basic algorithms and how to use them with PowerShe
 
 
 
+
+
+
               _
              | |
              | |===( )   //////
@@ -22,8 +25,7 @@ The third goal is showing the basic algorithms and how to use them with PowerShe
                         |||             |______________|
                         |||             || ||      || ||
                         |||             || ||      || ||
-------------------------|||-------------||-||------||-||-------
                         |__>            || ||      || ||
-
-
      hit any key to continue
+
+
