@@ -2,6 +2,9 @@
 
 ## Educational repository of powershell scripts
 
+Author: Far_n_y  
+Date: 02/04/2022  
+Version 0.07  
 
 ❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚    
 🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚❤️   
@@ -10,7 +13,7 @@
 💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚❤️🧡💛💚   
 💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚❤️🧡💛💚💜  
   
-  
+ CONTENT:  
 
 **-Basic_PS_Cheatsheet --> Basic cmdlets, functions, variables and loops.**
 
