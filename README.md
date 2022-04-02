@@ -1,11 +1,8 @@
-==================
-
 ====POWERCHEAT====
-
-==================
+=========
 
 Educational repository of powershell scripts.
-=============================================
+---------------
 The content is aimed to support learners to use the PowerShell.
 
 The first goal is basic understanding of the powershell, cmdlets, loops, variables, system cmdlets, functions, etc
