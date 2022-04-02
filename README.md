@@ -19,7 +19,7 @@ Version 0.07
 
 **-Basic_sec_PS_Cheatsheet --> Basic security tasks related to windows registry, hashes, logs, etc** 
 
-**-Pentest_sec_PS_Cheatsheet -->In development **
+**-Pentest_sec_PS_Cheatsheet -->In development**
 
 **-SysAdmin_PS_Cheatsheet -->In development**
 
