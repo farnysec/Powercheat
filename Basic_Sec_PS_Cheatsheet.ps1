@@ -33,7 +33,7 @@ Get-WmiObject -Class Win32_NetworkLoginProfile |
 Sort-Object -Property LastLogon -Descending | Select-Object -Property * 
 
 
-SIGNED SCRIPTS
+#SIGNED SCRIPTS
 ================================================================================
 #Check execution policy
 Get-ExecutionPolicy
@@ -41,7 +41,7 @@ Get-ExecutionPolicy
 Set-ExecutionPolicy [policy]
 
 
-FIND OUT WHO DID WHAT IN ACTIVE DIRECTORY - AUDITING MUST BE ENABLED.
+#FIND OUT WHO DID WHAT IN ACTIVE DIRECTORY - AUDITING MUST BE ENABLED.
 ================================================================================
 #Simple GPO deployed over DCs OU -> Computer Configuration -> Policies -> Windows Settings -> Security Settings -> Advanced Audit Configuration
 
