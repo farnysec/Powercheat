@@ -138,10 +138,6 @@ $data2 = @(
     @(7,8,9)
 )
 
-#Multidimensional array created as an object
-Write-Host $mybigarray = New-Object 'object[,,]' 10,20,10
-
-
 #HASHTABLE
 ================================================================================
 $myhashtable = @{London = "Critical" ; Manchester = "Critical" ; Brighton = "Non-critical"} 
@@ -165,7 +161,6 @@ catch
 		Write-Output "Something threw an exception"
 		Write-Output $_
 	}
-
 
 
 #2nd example
