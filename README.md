@@ -1,5 +1,5 @@
 # ======POWERCHEAT======
-## ![alt text](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true) Educational repository of powershell scripts
+## ![alt text](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true) Educational repository of powershell cheatsheets and scripts
 
 Author: Far_n_y  
 Date: 02/04/2022  
@@ -9,22 +9,23 @@ License: GNU General Public License v2.0
 ❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚    
 🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚❤️    
   
- CONTENT:  
+ 
+ CHEATSHEETS:  
 
-**-Basic_PS_Cheatsheet --> Basic cmdlets, functions, variables and loops.**
+**-Basic_PS_Cheatsheet.ps1 --> Basic cmdlets, functions, variables and loops**
 
-**-Basic_sec_PS_Cheatsheet --> Basic security tasks related to windows registry, accounts, logs, etc** 
+**-Basic_sec_PS_Cheatsheet.ps1 --> Basic security tasks related to windows registry, accounts, logs, etc** 
 
-**-Pentest_PS_Cheatsheet -->In development**
+**-Pentest_PS_Cheatsheet.ps1 -->In development**
 
-**-SysAdmin_PS_Cheatsheet -->In development**
+**-SysAdmin_PS_Cheatsheet.ps1 -->In development**
 
-**-SOC_PS_Cheatsheet -->In development**
+**-SOC_PS_Cheatsheet.ps1 -->In development**
 
-**-Algo_PS_Cheatsheet -->In development**  
+**-Algo_PS_Cheatsheet.ps1 -->In development**  
   
   
-  
+SCRIPTS:
 
 
 
