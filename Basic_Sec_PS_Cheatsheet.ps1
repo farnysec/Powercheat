@@ -41,6 +41,16 @@ Get-ExecutionPolicy
 Set-ExecutionPolicy [policy]
 
 
+#CHECK SECURITY UPDATES
+================================================================================
+Get-HotFix -Description "Security Update"
+
+
+#STOP ALL OTHER POWERSHELL SESSIONS, EXCEPT THIS ONE
+================================================================================
+Get-Process -Name powershell | Where-Object -FilterScript {$_.Id -ne $PID} | Stop-Process -PassThru
+
+
 #FIND OUT WHO DID WHAT IN ACTIVE DIRECTORY - AUDITING MUST BE ENABLED.
 ================================================================================
 #Simple GPO deployed over DCs OU -> Computer Configuration -> Policies -> Windows Settings -> Security Settings -> Advanced Audit Configuration
