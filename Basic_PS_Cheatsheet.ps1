@@ -6,7 +6,6 @@
 ================================================================================
 https://docs.microsoft.com/en-gb/powershell/
 https://www.powershellgallery.com/
-https://forums.powershell.org/
 https://www.reddit.com/r/PowerShell/
 
 
@@ -45,7 +44,6 @@ Get-Service | Sort-Object -Property @{Expression = "Status"; Descending = $true}
 ================================================================================
 Get-scheduledtask | where {$_.state -eq 'running'}
 Stop-ScheduledTask -TaskName HPAudioSwitch
-
 
 
 #NETWORK
@@ -108,7 +106,6 @@ $mymatrix = (1,2,3,4,5) ; $i = 0 ; do {write-host $mymatrix[$i] ; $i++}  while (
 $num = Read-Host "Enter a number" ; Switch ($num) { 1 {'Run Action 1'} ; 2 {'Run Action 2'} ; 3 {'Run Action 3'} }
 
 
-
 #VARS
 ================================================================================
 #Get-variable prints out all the environment variables.
@@ -119,7 +116,6 @@ $day = Read-Host “Enter day” ; write-host $day
 $day = $null ; Remove-Variable -Name day
 [int]$Global:computers = 12
 [char]$mychar = "a"
-
 
 
 #ARRAYS
@@ -146,7 +142,6 @@ $data2 = @(
 Write-Host $mybigarray = New-Object 'object[,,]' 10,20,10
 
 
-
 #HASHTABLE
 ================================================================================
 $myhashtable = @{London = "Critical" ; Manchester = "Critical" ; Brighton = "Non-critical"} 
@@ -156,19 +151,6 @@ $myhashtable.values
 $myhashtable.Count
 $myhashtable.ContainsKey('London')
 $myhashtable.london
-
-
-#FUNCTIONS oneliner
-================================================================================
-#Create new functions
-function global:Get-DependentSvs { $myreturn = Get-Service | Where-Object {$_.DependentServices} ; $myreturn = 2 ;return $myreturn}
-function global:Getme-something ([string]$myparameter1, [bool]$myparameter2)  { Write-Host $myparameter1 ; Write-Host $myparameter2} 
-#Check the code of a given function
-Get-Content function:\Getme-something
-#Move to the functions folder to check available functions
-Set-Location function: ; Get-ChildItem
-
-
 
 
 #EXCEPTIONS
@@ -202,7 +184,6 @@ finally
 }
 
 
-
 #PIPELINE
 ================================================================================
 #   $_ and $PSItem are the same variable. It's the current item in the pipeline
@@ -212,12 +193,10 @@ finally
 1,2,3 | Where-Object {$PSItem -gt 1}
 
 
-
 #HELP
 ================================================================================
 Get-help -Name Test-Connection -Full
 Get-Command
-
 
 
 #MODULES
@@ -228,13 +207,12 @@ Get-Module -ListAvailable
 Get-Command -Module WindowsSearch
 
 
-
-#OBJECTS
+#WEB
 ================================================================================
-
-
-
-
+#Get a website
+$Response = Invoke-WebRequest -URI https://www.bing.com/
+#Get links
+(Invoke-WebRequest -Uri "https://aka.ms/pscore6-docs").Links.Href
 
 
 #REST AND JSON
@@ -252,17 +230,6 @@ Invoke-RestMethod -Method Post -Uri $url -Credential $Cred -Body $body -OutFile 
 
 #JSON EXAMPLE. Get info about Registry process, convert to json, save it to file, print it and reconvert it 
 Get-Process Registry | ConvertTo-Json | Tee-Object json.txt ; Get-Content .\json.txt | ConvertFrom-Json
-
-
-
-#WEB
-================================================================================
-#Get a website
-$Response = Invoke-WebRequest -URI https://www.bing.com/
-#Get links
-(Invoke-WebRequest -Uri "https://aka.ms/pscore6-docs").Links.Href
-
-
 
 
 #TEXT N REGEX
@@ -285,8 +252,6 @@ Move-Item .\json2.txt .\this_is_how_you_deal_with_apostrophes.txt" -Confirm
 "@
 
 
-
-
 #MISC
 ===================================================================================================================
 #Get a random number
@@ -294,13 +259,20 @@ get-random @(0..50)
 #Get history of commands which match the string "Service"
 Get-History | Where-Object {$_.CommandLine -like "*Service*"}
 	
-
-
+	
+#FUNCTIONS oneliner
 ================================================================================
-================================================================================
-================================================================================
+#Create new functions
+function global:Get-DependentSvs { $myreturn = Get-Service | Where-Object {$_.DependentServices} ; $myreturn = 2 ;return $myreturn}
+function global:Getme-something ([string]$myparameter1, [bool]$myparameter2)  { Write-Host $myparameter1 ; Write-Host $myparameter2} 
+#Check the code of a given function
+Get-Content function:\Getme-something
+#Move to the functions folder to check available functions
+Set-Location function: ; Get-ChildItem
 
 
+#FUNCTIONS
+================================================================================
 function prompt_color {
     $color = 12
     Write-Host ("PS $env:USERDOMAIN@$env:USERNAME> ") -NoNewLine `
@@ -320,87 +292,3 @@ function My_circle ($p1, $p2) {
 
 	return $circumference
 }
-
-
-function get_url_from_rms ($csvfile) {
-
-	$Resultcsvpentest = Import-Csv .\Resultcsvpentest.csv
-
-	Remove-Variable -Name url_to_inc
-	Remove-Variable -Name counter
-	
-	$url_to_inc = @{}
-	
-	for($i=0 ; $i -le $Resultcsvpentest.count; $i++) {
-		$key = $Resultcsvpentest[$i].inc_num
-		$value = ((Select-String '(http[s]?)(:\/\/)([^\s,]+)(?=")' -Input $Resultcsvpentest[$i].scope).Matches.Value)
-		if ($url_to_inc.ContainsKey($key) ) {
-			$counter++
-			$ext_key = $key + "_" + $counter
-			$key = $ext_key
-		}
-		$url_to_inc.add( $key, $value )
-	} 
-
-}
-
-
-try
-	{
-	Import-Csv “C:\test\test.csv” | ForEach-Object {
-	$Name = $_.Name + “test.com”
-	New-ADUser `
-	-DisplayName $_.”Dname” `
-	-Name $_.”Name” `
-	-GivenName $_.”GName” `
-	-Surname $_.”Sname” `
-	-SamAccountName $_.”Name” `
-	-UserPrincipalName $UPName `
-	-Office $_.”off” `
-	-EmailAddress $_.”EAddress” `
-	-Description $_.”Desc” `
-	-AccountPassword (ConvertTo-SecureString “vig@123” -AsPlainText -force) `
-	-ChangePasswordAtLogon $true `
-	-Enabled $true `
-	Add-ADGroupMember “OrgUsers” $_.”Name”;
-	Write-Host "User created and added in the AD group"
-	}
-	}
-catch
-	{
-	$msge=$_.Exception.Message
-	Write-Host "Exception is" $msge
-	}
-
-
-============
-
-Find out who did what in Active Directory - Auditing must be enabled.
-
-Simple GPO deployed over DCs OU -> Computer Configuration -> Policies -> Windows Settings -> Security Settings -> Advanced Audit Configuration
-
-
-Find-Events -Report ADGroupMembershipChanges -DatesRange Last3days -Servers AD1, AD2 | Format-Table -AutoSize
-
-ReportTypes:
-Computer changes – Created / Changed – ADComputerCreatedChanged
-Computer changes – Detailed – ADComputerChangesDetailed
-Computer deleted – ADComputerDeleted
-Group changes – ADGroupChanges
-Group changes – Detailed – ADGroupChangesDetailed
-Group changes – Created / Deleted – ADGroupCreateDelete
-Group enumeration – ADGroupEnumeration
-Group membership changes – ADGroupMembershipChanges
-Group policy changes – ADGroupPolicyChanges
-Logs Cleared Other – ADLogsClearedOther
-Logs Cleared Security – ADLogsClearedSecurity
-User changes – ADUserChanges
-User changes detailed – ADUserChangesDetailed
-User lockouts – ADUserLockouts
-User logon – ADUserLogon
-User logon Kerberos – ADUserLogonKerberos
-User status changes – ADUserStatus
-User unlocks – ADUserUnlocked
-
-
-============
