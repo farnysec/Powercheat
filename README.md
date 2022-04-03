@@ -1,10 +1,10 @@
 # ======POWERCHEAT======
-
-## Educational repository of powershell scripts
+## ![alt text](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true) Educational repository of powershell scripts
 
 Author: Far_n_y  
 Date: 02/04/2022  
-Version 0.07  
+Version 0.23  
+License: GNU General Public License v2.0    
 
 ❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚    
 🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚❤️   
@@ -19,7 +19,7 @@ Version 0.07
 
 **-Basic_sec_PS_Cheatsheet --> Basic security tasks related to windows registry, hashes, logs, etc** 
 
-**-Pentest_sec_PS_Cheatsheet -->In development**
+**-Pentest_PS_Cheatsheet -->In development**
 
 **-SysAdmin_PS_Cheatsheet -->In development**
 
