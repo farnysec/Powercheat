@@ -17,7 +17,7 @@ License: GNU General Public License v2.0
 
 **-Basic_PS_Cheatsheet --> Basic cmdlets, functions, variables and loops.**
 
-**-Basic_sec_PS_Cheatsheet --> Basic security tasks related to windows registry, hashes, logs, etc** 
+**-Basic_sec_PS_Cheatsheet --> Basic security tasks related to windows registry, accounts, logs, etc** 
 
 **-Pentest_PS_Cheatsheet -->In development**
 
