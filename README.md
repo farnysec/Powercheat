@@ -2,9 +2,11 @@
 ## ![alt text](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true) Educational repository of powershell cheatsheets and scripts
 
 Author: Far_n_y  
+Powershell 5.1  
 Date: 02/04/2022  
 Version 0.23  
 License: GNU General Public License v2.0    
+
 
 ❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚    
 🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚❤️    
