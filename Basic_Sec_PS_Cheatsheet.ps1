@@ -6,6 +6,7 @@
 ================================================================================
 0..65535 | Foreach-Object { Test-NetConnection -Port $_ scanme.nmap.org -WA SilentlyContinue | Format-Table -Property ComputerName,RemoteAddress,RemotePort,TcpTestSucceeded }
 
+
 #ENVIRONMENT VARIABLES
 ================================================================================
 Get-variable -Verbose
@@ -48,7 +49,12 @@ Get-HotFix -Description "Security Update"
 
 #STOP ALL OTHER POWERSHELL SESSIONS, EXCEPT THIS ONE
 ================================================================================
-Get-Process -Name powershell | Where-Object -FilterScript {$_.Id -ne $PID} | Stop-Process -PassThru
+Get-Process -Name powershell* | Where-Object -FilterScript {$_.Id -ne $PID} | Stop-Process -PassThru
+
+
+Store credentials
+================================================================================
+$mycreds = Get-Credential
 
 
 #FIND OUT WHO DID WHAT IN ACTIVE DIRECTORY - AUDITING MUST BE ENABLED.
