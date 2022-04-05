@@ -36,9 +36,12 @@ SCRIPTS:
   
   
 USEFUL LINKS:  
+Microsoft Official Sites:  
 https://github.com/PowerShell  
 https://docs.microsoft.com/en-gb/powershell/  
 https://www.powershellgallery.com/  
+https://forums.powershell.org/
+OTHER FORUMS:  
 https://www.reddit.com/r/PowerShell/  
 https://stackoverflow.com/questions/tagged/powershell  
 
