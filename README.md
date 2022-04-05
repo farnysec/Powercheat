@@ -35,8 +35,13 @@ SCRIPTS:
 💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚❤️🧡💛💚💜  
   
   
-  
-  
+USEFUL LINKS:  
+https://github.com/PowerShell  
+https://docs.microsoft.com/en-gb/powershell/  
+https://www.powershellgallery.com/  
+https://www.reddit.com/r/PowerShell/  
+https://stackoverflow.com/questions/tagged/powershell  
+
   
 ...and always remember...   
 
