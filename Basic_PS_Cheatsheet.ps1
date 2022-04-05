@@ -2,12 +2,6 @@
 ###POWERSHELL CHEATSHEET EXT EDITION####
 ########################################
 
-#LINKS
-================================================================================
-https://docs.microsoft.com/en-gb/powershell/
-https://www.powershellgallery.com/
-https://www.reddit.com/r/PowerShell/
-
 
 #SYSTEM
 ================================================================================
