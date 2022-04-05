@@ -1,6 +1,10 @@
-########################################
-###POWERSHELL CHEATSHEET SEC EDITION####
-########################################
+###################################################
+#  POWERSHELL CHEATSHEET BASIC SEC EDITION        #
+#  Author: Far_n_y                                #
+#  Powershell 5.1                                 #
+#  License: GNU General Public License v2.0       #
+#  URL: https://github.com/farnysec/Powercheat    #
+###################################################
 
 #PORT SCAN
 ================================================================================
