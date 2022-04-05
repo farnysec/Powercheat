@@ -1,5 +1,5 @@
 # ==============POWERCHEAT==============
-## ![alt text](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true) Educational repository of powershell cheatsheets and scripts ![alt text](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true)
+## ![alt text](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true) Educational repository of powershell cheatsheets and scripts     ![alt text](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true)
 
 Author: Far_n_y  
 Powershell 5.1  
@@ -35,6 +35,7 @@ SCRIPTS:
 💙❤️🧡💛💚💜💙❤️🧡💛💚💜💙❤️🧡💛💚❤️🧡💛💚💜  
   
   
+  
 USEFUL LINKS:  
 
 Microsoft Official Sites:  
@@ -42,13 +43,25 @@ https://github.com/PowerShell
 https://docs.microsoft.com/en-gb/powershell/  
 https://www.powershellgallery.com/  
 https://forums.powershell.org/  
+  
+  
+  
+
 
 OTHER FORUMS:  
 https://www.reddit.com/r/PowerShell/  
 https://stackoverflow.com/questions/tagged/powershell  
-
+  
+  
+  
+  
+  
+  
   
 ...and always remember...   
+  
+  
+  
 
       _____  _   _                     _             _
      |_   _|| | ( )                   | |           | |
