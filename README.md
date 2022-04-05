@@ -1,5 +1,5 @@
 # ==============POWERCHEAT==============
-## ![alt text](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true) Educational repository of powershell cheatsheets and scripts     ![alt text](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true)
+## ![alt text](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true)  &nbsp; Educational repository of powershell cheatsheets and scripts  &nbsp;     ![alt text](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true)
 
 Author: Far_n_y  
 Powershell 5.1  
