@@ -3,7 +3,7 @@
 
 Author: Far_n_y  
 Powershell 5.1  
-Date: 02/04/2022  
+Date: 29/05/2022  
 Version 0.31  
 License: GNU General Public License v2.0    
 
@@ -13,6 +13,8 @@ License: GNU General Public License v2.0
   
  
  CHEATSHEETS:  
+ 
+**-PS_Symbols.txt --> List of special characters and symbols** 
 
 **-Basic_PS_Cheatsheet.ps1 --> Basic cmdlets, functions, variables and loops**
 
@@ -25,6 +27,8 @@ License: GNU General Public License v2.0
 **-SOC_PS_Cheatsheet.ps1 -->In development**
 
 **-Algo_PS_Cheatsheet.ps1 -->In development**  
+
+**-PS_Symbols.txt --> List of special characters and symbols**
   
   
 SCRIPTS:
