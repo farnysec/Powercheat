@@ -1,14 +1,14 @@
 Symbol	Function										                Example
-#		    Declare comment line.							            #This is my code below
-$		    Declare a variable.								            $Name
-+		    Concatenate.									                $test = "42" + "Slim Shady" + "Eminem" ; Write-host $test
-|		    Take output from first cmd; pass to second.		Get-Process | Sort-Object -Property id
-% 	    Foreach-Object									              1,2,3 | ForEach-Object {write-host "Something"}		->		1,2,3 | % {write-host "Something"}
-$_    	Current piped object $PSItem				          1,2,3 | Where-Object {$_ -gt 1}
-? 	    Where-Object									                Get-Service | Where-Object {$_.name -Match "win"}	->		Get-Service | ? {$_.name -Match "w"}
-;		    Run multiple commands on same line.	          $Name="Jes"; Write-Host $Name
-{}	    Enclose block of code.							          Get-Wmiobject -list | where {$_.name -match "win32*"}
-&		    Background job									
+# &nbsp;&nbsp;&nbsp;&nbsp; Declare comment line.							            #This is my code below
+$Declare a variable.								            $Name
++Concatenate.									                $test = "42" + "Slim Shady" + "Eminem" ; Write-host $test
+|Take output from first cmd; pass to second.		Get-Process | Sort-Object -Property id
+%Foreach-Object									              1,2,3 | ForEach-Object {write-host "Something"}		->		1,2,3 | % {write-host "Something"}
+$_Current piped object $PSItem				          1,2,3 | Where-Object {$_ -gt 1}
+?Where-Object									                Get-Service | Where-Object {$_.name -Match "win"}	->		Get-Service | ? {$_.name -Match "w"}
+;Run multiple commands on same line.	          $Name="Jes"; Write-Host $Name
+{}Enclose block of code.							          Get-Wmiobject -list | where {$_.name -match "win32*"}
+&Background job									
 
 Special Characters
 
