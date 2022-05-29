@@ -1,10 +1,11 @@
 # ==============POWERCHEAT==============
 ## ![alt text](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true)  &nbsp; Educational repository of powershell cheatsheets and scripts  &nbsp;     ![alt text](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true)
 
-Author: Far_n_y  
+Author: Far_n_y
+Environment: .NET Framework - Windows
 Powershell 5.1  
 Date: 29/05/2022  
-Version 0.31  
+Version 0.32  
 License: GNU General Public License v2.0    
 
 
