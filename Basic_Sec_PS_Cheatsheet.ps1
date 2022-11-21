@@ -11,6 +11,15 @@
 0..65535 | Foreach-Object { Test-NetConnection -Port $_ scanme.nmap.org -WA SilentlyContinue | Format-Table -Property ComputerName,RemoteAddress,RemotePort,TcpTestSucceeded }
 
 
+#CHECK SPF AND DMARC RECORDS FROM A LIST OF DOMAINS
+================================================================================
+foreach($line in Get-Content .\list_mx.txt) {
+    $domain_records = nslookup -query=any $line 8.8.8.8 | Select-String -Pattern "dmarc|spf"
+    write-host $line " " $domain_records | select-string -Pattern "answer" -notmatch
+
+}
+
+
 #ENVIRONMENT VARIABLES
 ================================================================================
 Get-variable -Verbose
